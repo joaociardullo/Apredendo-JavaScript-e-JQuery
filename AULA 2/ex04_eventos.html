@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        #area{
+            background: red;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            font: 25pt verdana;
+            color: aliceblue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interagir...
+
+    </div>
+    
+    <script>
+        var a = document.getElementById('area')
+
+        function clicar(){ //qdo clicar com mouse
+            a.innerHTML = 'CLICOU!!!'
+            a.style.background = 'green'
+        }
+
+        function entrar(){ //qdo mouse entrar
+            a.innerHTML = 'ENTROU!!!'
+            a.style.background = 'blue'
+        }
+
+        function sair(){ //qdo o mouse sair
+            a.innerHTML = 'SAIU!!!'
+            a.style.background = 'black'
+        }
+    </script>
+<!--   https://developer.mozilla.org/pt-BR/docs/Web/Events   -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soma</title>
+    <style>
+        body{
+           background: rgb(96, 186, 247); 
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        section.corpo{
+            width: 500px;
+            margin: auto;
+            background: rgb(48, 97, 231);
+            color:aliceblue;
+            padding: 15px;
+            text-align: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+<section class="corpo">
+
+    <h1>SOMAR DOIS VALORES</h1>
+
+    <p>
+        Informe o primeiro número: <input type="number" name="" id="tnum1">
+    </p>
+    <p>
+        Informe o segundo número: <input type="number" name="" id="tnum2">
+    </p>
+
+    <p>
+        <button onclick="somar()" > Calcular </button>
+    </p>
+
+    <div id="res">  </div>
+
+</section>
+
+<script>
+    function somar() {
+    var n1 = document.getElementById('tnum1').value
+    var n2 = document.querySelector('input#tnum2').value
+
+        var soma = Number(n1) + Number(n2)
+        
+    document.querySelector('div#res').innerHTML = (`A soma dos valores de ${n1} e ${n2} é: <strong> ${soma} </strong>)`)     
+
+    }
+</script>
+</body>
+</html>

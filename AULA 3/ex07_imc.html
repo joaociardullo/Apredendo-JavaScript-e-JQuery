@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMC</title>
+
+    <style>
+        body{
+            background: rgb(15, 50, 95);
+            font: 15pt verdana;
+            color: aliceblue;
+            }
+
+        h1{
+            text-align: center;
+            
+        }
+        #corpo{
+            background: rgb(109, 186, 238);
+            width: 500px;
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+            color: black;
+            border-radius: 30px;
+        }
+        input#limpar, input#calcular{
+            height: 30px;
+            margin: 15px;
+        }
+        div#res{
+            margin: 20px;
+            font-size: 15pt;
+        }
+        footer{
+            text-align: center;
+            margin: 10px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+     
+    <h1>IMC - ÍNDICE DE MASSA CORPORAL</h1>
+
+    <section id="corpo">
+
+        <p>Digite seu nome: <input type="text" name="" id="nome"> </p> 
+        <p>Informe seu peso em kg: <input type="number" name="" id="peso"></p> 
+        <p>Informe sua altura em m: <input type="number" name="" id="altura"></p>
+        
+        <p>
+            <button id="calcular" onclick="imc()">Calcular</button>
+            <button type="reset" id="limpar" onclick="limpar()">Limpar</button>
+        </p>
+       
+
+        <div id="res">
+            resultado...
+        </div>
+
+        <div id="situacao">
+            situação
+        </div>
+
+    </section>
+    <footer>
+        Curso de JavaScript
+    </footer>
+
+    <script>
+        function imc(){
+            let p = document.querySelector('input#peso').value
+            let a = document.querySelector('input#altura').value
+            
+            let imc = Number(p) / (Number(a) ** 2)
+
+            document.querySelector('div#res').innerHTML = (`Seu IMC é: <strong>${imc.toFixed(1)}</strong>`)
+
+            if(imc < 17){
+                document.querySelector('div#situacao').innerHTML = (`Você está muito abaixo do peso.`)
+            } else if (imc >= 17 && imc <18.5){
+                document.querySelector('div#situacao').innerHTML = ('Você está abaixo do peso.') 
+            } else if(imc >= 18,5 && imc <25){
+                document.querySelector('div#situacao').innerHTML = ('Você está com peso ideal.')
+            } else if(imc >= 25 && imc <30){
+                document.querySelector('div#situacao').innerHTML = ('Você está sobrepeso.')
+            }
+           
+        }
+
+        function limpar(){
+            if( document.getElementById('num1').value != '') {
+                document.getElementById('num1').value = ''
+                document.getElementById('num2').value = ''
+                document.getElementById('res').innerHTML = ''
+                document.getElementById('situacao').innerHTML = ''
+            }
+        }
+    </script>
+</body>
+</html>
+

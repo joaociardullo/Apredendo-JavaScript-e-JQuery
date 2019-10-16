@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analise Número</title>
+
+    <style>
+        body{
+            background: rgb(4, 122, 158);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14pt;
+            text-align: center;
+            color: #fff;
+        }
+
+        section{
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            width: 550px;
+            margin: auto;
+            box-shadow: 5px 3px 10px black;
+            text-align: center;
+            color: rgb(85, 82, 82);
+        }
+
+        select#tlista{
+            width: 250px;
+        }
+
+     
+        footer{
+            color: rgb(255, 248, 248);
+            text-align: center;
+            font-style: italic;
+            font-size: 12pt;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Análise de número</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Informe numeros de 1 ate 100:</p>
+            <input type="number" name="" id="tnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br> <br>
+            <select name="tlista" id="tlista" size="8"></select>
+            <br> <br>
+            <input type="button" value="finalizar" onclick="finalizar()">
+        </div>
+
+        <div id="res">
+            oiiiii
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Curso de JavaScript - Senac Tatuapé</p>
+    </footer>
+
+
+    <script src="analise.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area {
+            background: rgb(83, 83, 165);
+            width: 300px;
+            height: 300px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!-- div com funcao do mouse, aqui nesse ex sao 3 funçao  -->
+
+
+
+    </div>
+</body>
+
+<script>
+    var a = document.getElementById('area') 
+    //Script das funçao 
+    function clicar() {
+        a.innerHTML = 'clicou'
+        a.style.background = 'green'
+
+    function entrar() {
+        a.innerHTML = 'entrou'
+        a.style.background = 'yellow'
+
+    }
+
+    function sair() {
+
+        a.innerHTML = 'Saiu'
+        a.style.background = 'blue'
+    }
+
+</script>
+
+</html>

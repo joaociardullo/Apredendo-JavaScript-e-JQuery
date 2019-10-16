@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores</title>
+
+    <style>
+        body{
+            background: rgb(15, 50, 95);
+            font: 15pt verdana;
+            color: aliceblue;
+            }
+
+        h1{
+            text-align: center;
+        }
+        #corpo{
+            background: rgb(109, 186, 238);
+            width: 500px;
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+            color: black;
+            border-radius: 30px;
+        }
+        input#limpar, input#calcular{
+            height: 30px;
+            margin: 15px;
+        }
+        div#res{
+            margin: 20px;
+            font-size: 15pt;
+        }
+        footer{
+            text-align: center;
+            margin: 10px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+     
+    <h1>Média</h1>
+
+    <section id="corpo">
+
+        <p>Informe primeiro número: <input type="number" name="" id="num1"> </p> 
+        Informe segundo número: <input type="number" name="" id="num2"> </br>
+        <input type="button" id="calcular" value="Calcular" onclick="media()">
+        <input type="button" id="limpar" value="Limpar" onclick="limpar()"> </br>
+
+        <div id="res">
+            resultado...
+        </div>
+
+    </section>
+    <footer>
+        Curso de JavaScript
+    </footer>
+
+    <script>
+        function media(){
+            let n1 = document.querySelector('input#num1').value
+            let n2 = document.querySelector('input#num2').value
+            
+            let media = (Number(n1) + Number(n2)) / 2
+
+            document.querySelector('div#res').innerHTML = (`A média é <strong>${media.toFixed(1)}</strong>`)
+
+        }
+
+        function limpar(){
+            if( document.getElementById('num1').value != '') {
+                document.getElementById('num1').value = ''
+                document.getElementById('num2').value = ''
+                document.getElementById('res').innerHTML = ''
+            }
+        }
+    </script>
+</body>
+</html>

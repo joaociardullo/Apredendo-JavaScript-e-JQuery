@@ -1,0 +1,28 @@
+body{
+    background: #0E96b4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    color: red;
+}
+
+section#dados{
+    background: white;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 15pt;
+    box-shadow: rgba(49, 19, 19, 0.171);
+    width: 500px;
+    color:rgb(75, 73, 73);
+    margin: auto;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-size: 13pt;
+    font-style: italic;
+}
